@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Menu from './components/Menu'
-import Exercicios from './pages/Exercicios'
+import Exercicios from './pages/Exercicios/Ex20'
 import Home from './pages/Home'
 import Header from './components/Header'
 import Ex01 from './pages/Exercicios/Ex01'
