@@ -1,39 +1,37 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function Ex02() {
-    const [nomeproduto, setNomeproduto] = useState("")
-    const [preco, setPreco] = useState("")
-    const [resultado, setResultado] = useState("")
+    const [comprimento, setComprimento] = useState("Comprimento")
+    const [largura, setLargura] = useState("Largura")
+    const [resultado, setResultado] = useState("Resultado")
 
     function handleSubmit(event) {
         event.preventDefault()
-        setResultado(`O produto ${nomeproduto} custa R$ ${parseFloat(preco).toFixed(2)}`)
+        setResultado(`A área do terreno é ${comprimento * largura} m por quadrado`)
     }
+
 
     return (
         <>
-            <h2>Exercício 01</h2>
-            <p>2. Peça o comprimento e a largura de um terreno. Calcule e mostre a quantidade de metros quadrados.</p>
-
+        <h2>Exercício 2</h2>
+        <p>2. Peça o comprimento e a largura de um terreno. Calcule e mostre a quantidade de metros quadrados.</p>
             <section>
                 <form onSubmit={handleSubmit}>
-                    <label>Nome do Produto</label>
-                    <input
-                        type="text"
-                        value={nomeproduto}
-                        onChange={(event) => setNomeproduto(event.target.value)}
-                    />
-
-                    <label>Preço</label>
+                    <label>Comprimento</label>
                     <input
                         type="number"
-                        value={preco}
-                        onChange={(event) => setPreco(event.target.value)}
+                        value={comprimento}
+                        onChange={(event) => setComprimento(event.target.value)}
                     />
-
+                    <label>Largura</label>
+                    <input
+                        type="number"
+                        value={largura}
+                        onChange={(event) => setLargura(event.target.value)}
+                    />
                     <button type="submit">Enviar</button>
 
-                    <p>{resultado}</p>
+                    <p>{ resultado }</p>
                 </form>
             </section>
         </>

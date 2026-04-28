@@ -13,6 +13,8 @@ function Ex01() {
 
     return (
         <>
+        <h2>Exercício 1</h2>
+        <p>1. Peça ao usuário o nome de um produto e o preço. Mostre uma mensagem dizendo quanto custa o produto.</p>
             <section>
                 <form onSubmit={handleSubmit}>
                     <label>Produto</label>
